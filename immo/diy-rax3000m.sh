@@ -31,11 +31,11 @@ rm -rf feeds/packages/lang/golang
 git clone https://github.com/sbwml/packages_lang_golang -b 23.x feeds/packages/lang/golang
 
 ## Add luci-app-ddns-go
-rm -rf feeds/luci/applications/luci-app-ddns-go
-rm -rf feeds/packages/net/ddns-go
-git clone --depth 1 https://github.com/sirpdboy/luci-app-ddns-go package/new/ddnsgo
-mv -n package/new/ddnsgo/*ddns-go package/new/
-rm -rf package/new/ddnsgo
+# rm -rf feeds/luci/applications/luci-app-ddns-go
+# rm -rf feeds/packages/net/ddns-go
+# git clone --depth 1 https://github.com/sirpdboy/luci-app-ddns-go package/new/ddnsgo
+# mv -n package/new/ddnsgo/*ddns-go package/new/
+# rm -rf package/new/ddnsgo
 
 ## adguardhome
 git clone -b patch-1 https://github.com/kiddin9/openwrt-adguardhome package/new/openwrt-adguardhome
@@ -48,13 +48,13 @@ cp -rf $GITHUB_WORKSPACE/patches/AdGuardHome/links.txt package/new/luci-app-adgu
 rm -rf package/new/openwrt-adguardhome
 
 ## Add luci-app-mosdns
-rm -rf feeds/packages/net/v2ray-geodata
-rm -rf feeds/packages/net/mosdns
-git clone https://github.com/sbwml/v2ray-geodata package/new/v2ray-geodata
-git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/new/sbwml-mosdns
-mv -n package/new/sbwml-mosdns/*mosdns package/new/
-mv -n package/new/sbwml-mosdns/v2dat package/new/
-rm -rf package/new/sbwml-mosdns
+# rm -rf feeds/packages/net/v2ray-geodata
+# rm -rf feeds/packages/net/mosdns
+# git clone https://github.com/sbwml/v2ray-geodata package/new/v2ray-geodata
+# git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/new/sbwml-mosdns
+# mv -n package/new/sbwml-mosdns/*mosdns package/new/
+# mv -n package/new/sbwml-mosdns/v2dat package/new/
+# rm -rf package/new/sbwml-mosdns
 
 ## Add luci-app-wolplus
 # git clone https://github.com/animegasan/luci-app-wolplus package/new/luci-app-wolplus
@@ -74,20 +74,20 @@ rm -rf package/new/chenmozhijin-socat
 git clone https://github.com/kiddin9/kwrt-packages package/new/openwrt-packages
 
 ## Add luci-app-autoreboot
-mv package/new/openwrt-packages/luci-app-autoreboot package/new/luci-app-autoreboot
+# mv package/new/openwrt-packages/luci-app-autoreboot package/new/luci-app-autoreboot
 
 ## Add luci-app-onliner
 mv package/new/openwrt-packages/luci-app-onliner package/new/luci-app-onliner
 
 ## Add luci-app-qbittorrent
-mv package/new/openwrt-packages/qBittorrent-Enhanced-Edition package/new/qBittorrent-Enhanced-Edition
-mv package/new/openwrt-packages/luci-app-qbittorrent package/new/luci-app-qbittorrent
-## qbittorrent依赖
-mv package/new/openwrt-packages/qt6tools package/new/qt6tools
-mv package/new/openwrt-packages/qt6base package/new/qt6base
-mv package/new/openwrt-packages/libdouble-conversion package/new/libdouble-conversion
-rm -rf feeds/packages/libs/libtorrent-rasterbar
-mv package/new/openwrt-packages/libtorrent-rasterbar package/new/libtorrent-rasterbar
+# mv package/new/openwrt-packages/qBittorrent-Enhanced-Edition package/new/qBittorrent-Enhanced-Edition
+# mv package/new/openwrt-packages/luci-app-qbittorrent package/new/luci-app-qbittorrent
+# ## qbittorrent依赖
+# mv package/new/openwrt-packages/qt6tools package/new/qt6tools
+# mv package/new/openwrt-packages/qt6base package/new/qt6base
+# mv package/new/openwrt-packages/libdouble-conversion package/new/libdouble-conversion
+# rm -rf feeds/packages/libs/libtorrent-rasterbar
+# mv package/new/openwrt-packages/libtorrent-rasterbar package/new/libtorrent-rasterbar
 
 ## Add luci-app-partexp
 # mv package/new/openwrt-packages/luci-app-partexp package/new/luci-app-partexp
@@ -106,12 +106,12 @@ rm -rf package/new/openwrt-packages
 #################################
 
 ## openclash
-rm -rf feeds/luci/applications/luci-app-openclash
-bash $GITHUB_WORKSPACE/scripts/openclash.sh arm64
+# rm -rf feeds/luci/applications/luci-app-openclash
+# bash $GITHUB_WORKSPACE/scripts/openclash.sh arm64
 # bash $GITHUB_WORKSPACE/scripts/openclash-dev.sh arm64
 
 
 ## zsh
-bash $GITHUB_WORKSPACE/scripts/zsh.sh
+# bash $GITHUB_WORKSPACE/scripts/zsh.sh
 
 ls -1 package/new/
